@@ -74,46 +74,46 @@ function Dot(number, xpos, ypos){
 			pop();
 }
 		
-		if (this.mouseIn() ===true && checkIn(this.number)===false){
+		// if (this.mouseIn() ===true && checkIn(this.number)===false){
 			push();
-			// if(this.size <windowWidth){
-			// 	this.size += this.size+0.0000000001;
-			// }
-			// Check where we are at in the unfoldingpush();
-			push();
-			fill(255);
-			textSize(16);
-			// noStroke();
-			stroke(244);
-			textFont(Myriad);
-			switch (stage){
-				case 0:
-					text('About Me', this.x-25, this.y-20);
-					break;
-				case 1:
-					text('Education', this.x-25, this.y-20);
-					break;
-				case 2:
-					text('Professional Experience', this.x-25, this.y-20);
-					break;
-				case 3:
-					text('Hobbies', this.x-25, this.y-20);
-					break;
-				case 4:
-					text('Skills', this.x-25, this.y-20);
-					break;
-				case 5:
-					text('Vision', this.x-25, this.y-20);
-					break;
-				case 6:
-					text('Go To Menu', this.x-25, this.y-20);
-					break;
-				default:
-					break;
+		// 	// if(this.size <windowWidth){
+		// 	// 	this.size += this.size+0.0000000001;
+		// 	// }
+		// 	// Check where we are at in the unfoldingpush();
+		// 	push();
+		// 	fill(255);
+		// 	textSize(16);
+		// 	// noStroke();
+		// 	stroke(244);
+		// 	textFont(Myriad);
+		// 	switch (stage){
+		// 		case 0:
+		// 			text('About Me', this.x-25, this.y-20);
+		// 			break;
+		// 		case 1:
+		// 			text('Education', this.x-25, this.y-20);
+		// 			break;
+		// 		case 2:
+		// 			text('Professional Experience', this.x-25, this.y-20);
+		// 			break;
+		// 		case 3:
+		// 			text('Hobbies', this.x-25, this.y-20);
+		// 			break;
+		// 		case 4:
+		// 			text('Skills', this.x-25, this.y-20);
+		// 			break;
+		// 		case 5:
+		// 			text('Vision', this.x-25, this.y-20);
+		// 			break;
+		// 		case 6:
+		// 			text('Go To Menu', this.x-25, this.y-20);
+		// 			break;
+		// 		default:
+		// 			break;
 
-			}
-		}
-		pop()
+		// 	}
+		// }
+		// pop()
 
 			noFill();
 			strokeWeight(3);
