@@ -1,7 +1,7 @@
 <!DOCTYPEHTML>
 <html>
   <head>
-<script src="p5.js"></script>
+<script src="assets/p5.js"></script>
     <script   src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
@@ -18,34 +18,7 @@
     <script src="html2canvas/dist/html2canvas.js"></script>
   </head>
   <!-- <body> -->
-
-  <glitch>
-  <div id="content">
-  	
-  	<div class="side-menu">
-  		<ul>
-  			<li onclick="changePage(0)">About me</li>
-  			<li onclick="changePage(1)">Education</li>
-  			<li onclick="changePage(2)">Experience #1</li>
-  			<li onclick="changePage(3)">Experience #2</li>
-  			<li onclick="changePage(4)">Hobbies</li>
-  			<li onclick="changePage(5)">Coding and Blockchain</li>
-  			<li onclick="changePage(6)">Working Together</li>
-  		<ul>
-  	</div>
-  	<svg id="read-mode" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
-		<path d="M59,28h-2.18c-0.951-5.666-5.85-10-11.748-10c-5.822,0-10.696,4.119-11.825,9.579c-0.971-0.814-2.079-1.246-3.247-1.246
-		c-1.167,0-2.274,0.432-3.245,1.245C25.639,22.118,20.825,18,15.072,18C8.756,18,3.565,22.851,3.051,29H1c-0.553,0-1,0.448-1,1
-		s0.447,1,1,1h2.051c0.514,6.149,5.705,11,12.021,11c6.467,0,11.736-5.207,11.911-11.671c0.853-1.285,1.915-1.996,3.017-1.996
-		c1.102,0,2.164,0.712,3.017,1.996C33.195,36.793,38.528,42,45.072,42C51.649,42,57,36.617,57,30h2c0.553,0,1-0.448,1-1
-		S59.553,28,59,28z M15.072,40C9.519,40,5,35.514,5,30s4.519-10,10.072-10C20.64,20,25,24.393,25,30S20.64,40,15.072,40z M45.072,40
-		C39.519,40,35,35.514,35,30s4.519-10,10.072-10C50.64,20,55,24.393,55,30S50.64,40,45.072,40z"/>
-	</svg>
-	<!-- <div id='read-bubble'>
-	 <p> Read Mode</p>
-	</div> -->
-  	<div class="fast-fo">
+	<div class="fast-fo">
   	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 513.563 513.563" style="enable-background:new 0 0 513.563 513.563;" xml:space="preserve">
 		<g>
@@ -64,8 +37,40 @@
 			c3.385,1.692,6.769,5.077,6.769,10.285C477.763,261.957,474.378,267.163,469.301,270.547z"/>
 		</g>
 		</svg>
+		<p>Unfold Menu</p>
 
   	</div>
+  <glitch>
+  <div id="content">
+  	
+  	<div class="side-menu">
+  		<ul>
+  			<li onclick="changePage(0)">About me</li>
+  			<li onclick="changePage(1)">About Us</li>
+  			<li onclick="changePage(2)">Education</li>
+  			<li onclick="changePage(3)">Experience #1</li>
+  			<li onclick="changePage(4)">Experience #2</li>
+  			<li onclick="changePage(5)">Coding</li>
+  			<li onclick="changePage(6)">Blockchain</li>
+  			<li onclick="changePage(7)">Hobbies</li>
+  		<ul>
+  	</div>
+  	<div id="read-mode">
+	  	<svg  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+			<path d="M59,28h-2.18c-0.951-5.666-5.85-10-11.748-10c-5.822,0-10.696,4.119-11.825,9.579c-0.971-0.814-2.079-1.246-3.247-1.246
+			c-1.167,0-2.274,0.432-3.245,1.245C25.639,22.118,20.825,18,15.072,18C8.756,18,3.565,22.851,3.051,29H1c-0.553,0-1,0.448-1,1
+			s0.447,1,1,1h2.051c0.514,6.149,5.705,11,12.021,11c6.467,0,11.736-5.207,11.911-11.671c0.853-1.285,1.915-1.996,3.017-1.996
+			c1.102,0,2.164,0.712,3.017,1.996C33.195,36.793,38.528,42,45.072,42C51.649,42,57,36.617,57,30h2c0.553,0,1-0.448,1-1
+			S59.553,28,59,28z M15.072,40C9.519,40,5,35.514,5,30s4.519-10,10.072-10C20.64,20,25,24.393,25,30S20.64,40,15.072,40z M45.072,40
+			C39.519,40,35,35.514,35,30s4.519-10,10.072-10C50.64,20,55,24.393,55,30S50.64,40,45.072,40z"/>
+		</svg>
+		<p> read mode</p>
+	</div>
+	<!-- <div id='read-bubble'>
+	 <p> Read Mode</p>
+	</div> -->
+
 	<div class="guidance">
   		<div id="greetings">
   		<p> Welcome to a very Chained Resume </p>
@@ -76,6 +81,11 @@
 	  		<p> Click on the dancing dots to progress</p>
 	  	</div>
 	</div>
+	<div class="guidance">
+	  	<div id="reaode">
+	  		<p> Click on the glasses to enter or leave Read Mode. Click the arrows to fast forward to and deploy the entire menu.</p>
+	  	</div>
+	</div>
 	 	
   
 
@@ -84,41 +94,51 @@
   	<!-- End guidance -->
   	</div>
   	<!-- Start maincontent -->
-  	<div class="main-content">
-  			<div class="main-content-box" id="together">
-	  		<h1>Vision </h1>
-	  		<hr>
-	  		<div class="focus">
-	  			<p>I made this page and decided to contact you  because ever since the release of your SDK I have been fascinated by your project and I am a point in my life where I want to professionally transition into a blockchain expert.  <br><br>
-I believe Chain's initiative is the right path towards a truly global adoption of blockchain(s). In two words: we need to introduce accountability and practicality, so that we offer solutions which are realistically implementable and answer real-life problems. I believe this is what Chain is doing, and why it can grow into one of the largest companies in the world. <br><br>
-I don't care what I do with Chain provided that I can grow with you and help you grow. Ideally, I would like to take up a Partner Lead position and meet prospective clients, ask them about their problems, identify how and if blockchain can help, and participate to design of solutions. However, if the position is taken and that now you need an executive assistant or a front-end developer, that's what I'll be and I'll wait for my chance to get to the next position. <br><br>
-My profile is a bit atypical, as a jack-of-multiple trades I have that interdisciplinary mentality which is crucial to fulfil any position. I understand coding, law, debt-capital markets, entrepreneurship and most importantly blockchain are key aspects of Chain's activities and cannot be dealt with independently. I've proved through my various experiences that I can get things done in different environments from a rice farm in Uganda to a shiny office in Melbourne CBD. <br><br>
-Thank you for your time, if you are interested in my profile and would like to meet I will take the plane from Paris to San Francisco or New-York in a heart-beat. And by the way I would be happy working in either city New-York is where I am born and I have a base there, and San-Francisco is my dream city. 
-</p>
-	  		</div>
-	  	</div>
+<div class="main-content">
   		<div class="main-content-box" id="about-me">
-
-	  		<h1> About Me </h1>
+	  		<h1>About Me </h1>
 	  		<hr>
-	  		<div class="focus">
-	  			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	  		<div class="focus"><p>
+			My name is Jack, I am an American-French ex-international economic lawyer and current entrepreneur. The transition from one field to the other happened at the end of my research program. I had to choose between pursuing my PhD thesis about Corporate Social Responsibility in International Investment Law and starting a company. I decided to found Manage My Power (MMP) with my associates and haven't regretted it so far. For various reasons, I recently went back to France, I am now working part-time and remotely for MMP while my associates are doing the ground work. I spent the other half of my time helping an Australian blockchain company to set up an office in Europe. 
+			  	</p>
 	  		</div>
 	  	</div>
+
+  		<div class="main-content-box" id="together">
+	  		<h1>About Us </h1>
+	  		<hr>
+	  		<div class="focus">
+	  		<p>
+	  			I am contacting you because ever since the release of your SDK I have been fascinated by your project and I am at a point in my life where I want to professionally transition into a blockchain expert.  
+<br><br>
+I believe Chain's initiative is on the right path towards a truly global adoption of blockchain(s). The blockchain industry needs to offer solutions which are realistically implementable, answer real-life problems and service providers must become accountable. I believe this is what Chain is doing, and why it can grow into one of the largest companies in the world. 
+<br><br>
+I don’t care what I do with Chain, provided that I can grow with you and help you grow. Ideally, I would like to take up a Partner Lead position and meet prospective clients, ask them about their problems, identify how and if blockchain can help, and participate to design of solutions. However, if the position is taken and that you now need an executive assistant or a front-end developer, that is what I will be and I will wait for my chance to get to the next position. 
+<br><br>
+My profile is a bit atypical, as a jack-of-multiple trades I have that interdisciplinary and multicultural mentality which is crucial to fulfil any position. I understand coding, law, debt-capital markets, entrepreneurship and most importantly blockchain are key aspects of Chain's activities and cannot be dealt with independently. I've proved through my various experiences that I can get things done in different environments from a rice farm in Uganda to a shiny office in Melbourne CBD. 
+<br><br>
+Thank you for your time, if you are interested in my profile and would like to meet, we can Skype or I will take the plane from Paris to San Francisco or New-York in a heart-beat.
+<br><br>
+PS: I would be happy working in either New York or San Francisco. New-York is where I am born and I have a base there, and San-Francisco is a city I have always dreamt to live in. 
+
+				</p>
+	  		</div>
+	  	</div>
+	  
 	  	<div class="main-content-box" id="Education">
 		  		<h1> Education </h1>
 		  		<hr>
 		  		<div class="focus">
 		  			<div class="col-1">
 		  			<h1> University of Melbourne </h1><h3> Master <br> Commercial Law </h3>
-		  			<p>Melbourne University was in easy choice for a kid who loved research, looking for the best school and for a great adventure. First it is in Australia, second it was ranked 8th best law school in the world and the admission process is fast. <br> Over there, I was the youngest graduate and the most prolific with over 100.000 words written in a year. <br> </p>
+		  			<p>Melbourne University was an easy choice for a kid who loves research, looking for the best school and a great adventure. First it is in Australia, second it is ranked 8th best law school in the world and the admission process is fast. <br> Over there, I was the youngest graduate and the most prolific one with over 100.000 words written in a year. </p>
 		  			</div>
 		  			<div class="col-divide">
 		  			</div>
 		  			<div class="col-2">
 		  			<h1> Sorbonne University </h1>     
 					<h3>Bahelor and Master<br> International Economic Law</h3>
-					<p> Free and competitive university is what allowed me to turn from the lazy student I was to whom teachers would always say 'you will never achieve anything'. Every year 50 to 70 % of the students would not pass, so I had step up my game. I learned to work indepandently at first until I thrived for excellence and strengthened my skills with the best of my peers who became my friends.</p>
+					<p>A free and competitive university is what allowed me to turn away from the lazy student to whom teachers would always say 'you will never achieve anything'. Every year 50 to 70 % of the students would not pass, so I had step up my game. I learned to work independently at first, then thrived for more, I wanted to reach excellence so I strengthened my skills with the best of my peers who also became my friends.</p>
 					</div>
 		  		</div>
 	  	</div>
@@ -126,31 +146,44 @@ Thank you for your time, if you are interested in my profile and would like to m
 	  		<h1> Start-up Experience </h1>
 	  		<hr>
 	  		<div class="focus">
-	  			<p>At the end of my studies I had the choice between continuing my passion project by pursuing my PhD thesis or starting a new adventure by founding a company with my associates. I chose the later option and haven't regreted it so far. Manage My Power (MMP) was created to solve the problem that too many solar owners had: lack of returns. Our solution is built to guide businesses in their energy investments, and save them energy with what they already have. My role was initially to overview contracts, identify leads, negotiate contracts and design custom solutions for larger projects. It wasn't easy bringing money in to continue R&D and pay ourselves. So, I started another venture doing some IT consulting for SMEs looking to automate their business processes. Even if it was successful on a financial level, my associate and I had to part ways. Now MMP is mostly a B2B platform we rely on energy efficiency specialists to on sale our solution. My remote role is currently to identify leads, build business profiles, overview operations and IT work.</p>
+	  			<p>We created Manage My Power (MMP) with the idea to solve the problem that too many solar owners were facing: lack of returns. We then extended the scope of our product and it is now designed to guide businesses in their energy investments, and save them energy with what they already have. My role was initially to identify leads, negotiate and write contracts and design custom solutions for larger projects.<br><br>
+ 				It wasn't easy to bring money in to continue R&D and pay ourselves. So, I started another venture doing some IT consulting for SMEs looking to automate their business processes. Even if it was successful on a financial level, my associate and I had to part ways. Now, MMP is mostly a B2B operation, we rely on energy efficiency specialists to sell our solution. My remote role is currently to identify leads, build business profiles, overview operations and perform some IT work.
+
+</p>
 	  		</div>
 	  	</div>
 	  	<div class="main-content-box" id= "not-for-pro">
 	  		<h1> Non-Profit Experience </h1>
 	  		<hr>
 	  		<div class="focus">
-	  			<p>Humanitarian work has been my calling since I was in middle school. I got my hands dirty right after high school and worked for an organization in South Africa and Ghana. However, it is a couple years later that I did some more tangible work in Uganda, a country which a learned to cherish and love. I worked like a mad man over there running a foster home/school from top to bottom. It was one of my biggest challenged and I battled it with strong organisational and negotiation skills. I learned that I can't always be the nice guy and made extremely tough decisions. I also experienced first hand corruption issues I was highly disappointed and I told myself I would only go back when I will be implement more efficient and trackable systems and have money the implement it from the very top. I believe that in a decade with money and blockchains we can develop those systems. </p>
+	  			<p>Humanitarian work has been my calling since I was in middle school. I got my hands dirty right after high school and worked for an organization in South Africa and Ghana. A couple years later I achieved more substantial work in Uganda, a country which I now cherish and love. I worked every single minute I was awake, running a foster home/school from top to bottom. It was one of my biggest challenge and I handled it with strong organisational and negotiation skills. I had a firsthand experience with corruption issues, I was highly disappointed and I told myself I would only go back when I will be able to implement more efficient and trackable systems. And I believe that in a few years with money and blockchains we can develop those systems. 
+				<br> <br>
+				What I learned:  I can't always be the nice guy and I must make extremely tough decisions for the greater good; a 70 hours work week is an easy week; sometimes you have to know when to say stop, breathe some fresh air, see friends and get back to it stronger.
+				</p>
+	  		</div>
+	  	</div>
+	  	
+	  	<div class="main-content-box" id="coding">
+	  		<h1> Coding</h1>
+	  		<hr>
+	  		<div class="focus">
+	  			<p>My passion for computers started when I was young. I remember going to one of my parent's friends place and spend hours just watching him play around his screen. I wanted to learn how to code but we didn't have a computer and no one around me really knew what coding was about; people just told me that it was for smart people good in math. Thus, I slowly left that dream behind. About a year ago, I remembered that old dream. As soon as I started to get into it, I got obsessed.<br><br> Coding was so much more tangible, logical and challenging than law. I especially loved that results can be tested and confronted to objective standards (it was only later that I learned that coding also has a great part of subjectivity too). I first learned R to do data analysis because I thought it would benefit my business the most, then started to do some C because I wanted to understand how computers work under the hood. Finally, I learned JavaScript and started to code creatively. I did so by watching a YouTube channel called Coding Rainbow, I joined its community, and learned more there that I could ever dream of. Then came Blockchain.</p>
+	  		</div>
+	  	</div>
+<div class="main-content-box" id="coding">
+	  		<h1> Blockchain </h1>
+	  		<hr>
+	  		<div class="focus">
+	  			<p> In Melbourne, we are blessed with one of the greatest blockchain/crypto community in the world with a physical location: the Blockchain Centre. The Centre is a co-working space and meetup place populated with amazing start-ups and people sharing the same passion. Being able to talk every single day about crypto and blockchain with so many different people is a real blessing and a constant intellectual challenge. All this work and exposure gave me the chance to teach people, from engineers to business leaders, about the blockchain world and I even got the chance to be invited at Asia Utility Week to talk about the possible disruptions which will occur in the energy sector. I recently started experimenting with different tools (especially Ethereum and Solidity), to develop a blockchain-based energy transaction system.</p>
 	  		</div>
 	  	</div>
 	  	<div class="main-content-box" id="hobbies">
 	  		<h1> Hobbies </h1>
 	  		<hr>
 	  		<div class="focus">
-	  			<p>As a kid I didn't have many outlets to express myself (I wanted to be a coder but didn’t have a computer) and I was to fat to be good at sports, so I read a lot. I can’t stretch all the benefits reading has here, but one thing was that I understood adults much better that I could other kids. Even if now it might be the other way around, I believe the greatest thing I got from reading is having experiences without having to live them. Later on, I developed more hobbies like playing instruments, singing, kick-boxing and Afro-Latin dancing at university. About a year ago two hobbies took over my life. First, I was overweight and I decided one morning that 4 months from that day I would run an ultra-marathon, which was one of the greatest experience of my life. Every day on the track and during race day I learned what determination really is. Second, I learned how to code. </p>
+	  			<p>As a kid, I didn't have much outlets to express myself (I wanted to be a coder but didn’t have a computer) and I was too fat to be good at sports, so I read a lot. I cannot expend here on all the benefits of reading. The greatest thing I gained from reading was to be able to have experiences without having to live them. From these experiences, I learned life lessons and learned how people work and think through the eyes of characters and authors. Later, I developed more hobbies like playing instruments, singing, kick-boxing and Afro-Latin dancing. About a year ago, two hobbies took over my life. First, I was overweight and I decided one morning that 4 months from that day I would run an ultra-marathon, which was one of the greatest experience of my life. Every day on the track and during race day I experienced what determination really is about. Second, I learned how to code. </p>
 	  		</div>
 	  	</div>
-	  	<div class="main-content-box" id="coding">
-	  		<h1> Coding And Blockchain </h1>
-	  		<hr>
-	  		<div class="focus">
-	  			<p>Passion for computers started when I was really young, I remember going to one of my parent’s friends place and just watch playing around his screen. I wanted to learn how to code but we didn’t have a computer and no one around me really knew what coding was about except that you probably had to be some sort of math genius to understand it. So I sort of left that dream behind until a year ago when I remembered that passion and objective I had but never fulfilled it. As soon as I started to get into it, I got obsessed. Coding was so much more tangible and logical, challenging and results could actually be tested and confronted to objective standards (it was only later that I learned that coding also has a great part of subjectivity too). I first learned R to do data analysis because I thought it would benefit my business most, then started to do some C because I thought it would help me understand how computers work under the hood, then I learned JavaScript. That’s when I really started to have fun and coded creatively. I did so by watching a YouTube channel called Coding Rainbow, I joined its community, and learned more there that I could ever dream of.  Then came Blockchain. In Melbourne, we are blessed with one of the greatest blockchain/crypto community in the world with a physical location: the Blockchain Centre. The Centre is a co-working space and meetup place populated with amazing start-ups and people sharing the same passion. Being able to talk every single day about crypto and blockchain with so many different people is a real blessing and a constant intellectual challenge. I even got the chance to teach people from engineers to business leaders about the blockchain world at the Centre and even at Asia Utility Week later.</p>
-	  		</div>
-	  	</div>
-
 	  
   	</div>
 

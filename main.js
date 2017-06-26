@@ -34,36 +34,62 @@ let glitch = [];
 	var glitch_autostart = 1;
 
 
-$(document).ready(function(){
-
-	
-	$($('.guidance')[0]).addClass('visible')
-	setTimeout(function(){
-		if(stage===0){
-		$($('.guidance')[0]).removeClass('visible');
-		$($('.guidance')[1]).addClass('visible');
+$(document).ready(()=>{
+	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ 
+	setTimeout(()=>{
+		if(stage===0)
+			$($('.guidance')[0]).addClass('visible')
+			$('.fast-fo p').css('opacity', '1');
+},4000);
+					setTimeout(()=>{
+						if(stage===0){
+					$($('.guidance')[0]).removeClass('visible');
+					$($('.guidance')[1]).addClass('visible');
+					}
+					}, 7300);
 	}
 
-	}, 3300);
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ // some code..	setTimeout(()=>{
+	$($('.guidance')[0]).addClass('visible');
+		setTimeout(()=>{
+			if(stage===0){
+		$($('.guidance')[0]).removeClass('visible');
+		$($('.guidance')[1]).addClass('visible');
+		}
+		}, 3300);
+}
+	
 	// $('.guidance').click(function(){
-	$('#read-mode').click(function(){
+	$('#read-mode svg').click(function(){
+		$('#read-mode p').css('display', 'none');
 		if(readmode===false){
 			$('.main-content-box .focus').css("background", "white");
 			$('.main-content-box').css("background", "white");
-			$('.main-content-box .focus h1, h2, p').css("color", "black");
-			$('.main-content-box h1').css("color", "black")
+			$('.main-content-box .focus h1, h2, p, hr').css("color", "black");
+			$('.main-content-box h1').css("color", "black");
+			$('.main-content-box hr').css("border", "3px solid black");
+
 			readmode = true;
 		}
 		else {
 			$('.main-content-box .focus').css("background", "rgba(247,81,77, 0.7)");
 			$('.main-content-box').css("background", "rgba(247,81,77, 0.5)");
 			$('.main-content-box .focus h1, h2, p').css("color", "white");
-			$('.main-content-box h1').css("color", "white")
+			$('.main-content-box h1').css("color", "white");
+			$('.main-content-box hr').css("border", "3px solid white");
 			readmode= false;
 		}
 	});
 	$('.fast-fo').click(function(){
 		let y =0;
+		if(stage === 0){
+			$('#read-mode').css('opacity', '1');
+			changePage(stage);
+		}
+		
+		$('#intro-animation').css('opacity', '0');
 		for(let x = 0; x<$('.side-menu ul li').length; x++){
 			if($($('.side-menu ul li')[x]).hasClass('visible'))
 				continue;
@@ -74,13 +100,15 @@ $(document).ready(function(){
 		}
 		}
 
+
 	});
 
 	$(window).click(function(){
 	
 		
-			
-		// if(stage>2){
+		$('.fast-fo p').css('display', 'none')
+
+		// if(stage>2){, 
 
 		// 	for(let x=1; x< $('.main-content-box').length; x++){
 

@@ -1,4 +1,11 @@
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	// $()
+}
+if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
 	var container;
+
+        var anglito = 6.28319;
 			var camera, scene, renderer;
 			var group;
 			var targetRotation = 0;
@@ -15,12 +22,12 @@
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
-				$(container).attr('id', 'intro');
+				$(container).attr('id', 'intro-animation');
 				var info = document.createElement( 'div' );
 				container.appendChild( info );
 				scene = new THREE.Scene();
 				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 7000 );
-				camera.position.set( 0, 150, 1100 );
+				camera.position.set( -80, 0, 1100 );
 				scene.add( camera );
 				var light = new THREE.PointLight( 0xffffff, 1.4 );
 				camera.add( light );
@@ -30,7 +37,13 @@
 //         group.rotation.y=160;
         
 //         group.rotation.x=170;
-        group.rotation.z=190.63
+        // group.rotation.z=190.63
+        group.rotation.x = anglito;
+        group.rotation.y = anglito;
+        group.rotation.z = 4.2;
+        group.position.x = -200;
+        group.position.y = 100;
+        //Key value 2.1
 
 		
 				function addShape( shape, extrudeSettings, color, x, y, z, rx, ry, rz, s ) {
@@ -68,7 +81,7 @@
         
 
 				
-				for( var i = 0; i < firsthexPts.length; i ++ ) firsthexPts[ i ].multiplyScalar( 0.85 );
+				for( var i = 0; i < firsthexPts.length; i ++ ) firsthexPts[ i ].multiplyScalar( 0.35 );
 				var firsthexShape = new THREE.Shape( firsthexPts );
 				// Second Hex
         var secondhexPts = [];
@@ -90,7 +103,7 @@
 				secondhexPts.push( new THREE.Vector2( 450+300, 600-300-45 ) );        
 				secondhexPts.push( new THREE.Vector2( 450+300, 600-300 ) );
 				
-				for( var i = 0; i < secondhexPts.length; i ++ ) secondhexPts[ i ].multiplyScalar( 0.85 );
+				for( var i = 0; i < secondhexPts.length; i ++ ) secondhexPts[ i ].multiplyScalar( 0.35 );
 				var secondhexShape = new THREE.Shape( secondhexPts );
 				// Triangle
 			
@@ -169,7 +182,48 @@
 				render();
 			}
 			function render() {
-				group.rotation.x += 0.05;
+				// if (group.rotation.x > -4.5)
+				// 	group.rotation.x -= 0.05 ;
+				if (group.rotation.y >  0){
+					group.rotation.y -= 0.05 ;
+				}
+				// if (group.rotation.y <=  -6.28319*2  && group.rotation.y >= -6.28319)
+				// 	group.rotation.y -= 1.5 ;
+
+				// if (group.rotation.y <  -6.28319*4  && group.rotation.y > -6.28319*2)
+				// 	group.rotation.y -=1;
+				// if (group.rotation.y <  -6.28319*6  && group.rotation.y > -6.28319*4)
+				// 	group.rotation.y -=0.5;
+				// if (group.rotation.y <  -6.28319*7  && group.rotation.y > -6.28319*6)
+				// 	group.rotation.y -= 0.025;
+				// if (group.rotation.y <  -6.28319*8  && group.rotation.y > -6.28319*7)
+				// 	group.rotation.y -= 0.025;
+				// if (group.rotation.y <  -6.28319*10)
+				// 	group.rotation.y -= 0.05;
+
+				if (group.rotation.z > 0){
+						group.rotation.z -= 0.05 ;
+						group.position.x += 4.761904/2;
+						group.position.y -= 2.38095/2;
+				}
+
+				if(group.rotation.y<=0){
+					setTimeout(()=>{
+					camera.position.z-=40;
+
+				},500)
+				}
+
+				if(camera.position.z<= 0){
+					 $('#intro-animation').css('opacity', '0');
+					setTimeout(()=>{
+						$('#intro-animation').remove();
+					}, 1200);
+					
+					
+				}
 				renderer.render( scene, camera );
 			}
 
+
+}

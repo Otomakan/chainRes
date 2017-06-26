@@ -4,9 +4,17 @@ var growing =1;
 let progression = 0;
 var clicked =false;
 let entered =false;
+var Myriad;
+let myCanvas;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	$('body').css('background', 'rgba(247,81,77, 1)');
+	$('glitch').css('background', 'rgba(247,81,77, 1)');
+	$('html').css('background', 'rgba(247,81,77, 1)')
+}
+
 
 function preload(){
-	Myriad = loadFont('assets/MyriadPro-Semibold.otf')
+	 Myriad = loadFont('assets/MyriadPro-Semibold.otf')
 }
 
 function setup(){
@@ -72,8 +80,11 @@ function Dot(number, xpos, ypos){
 			// 	this.size += this.size+0.0000000001;
 			// }
 			// Check where we are at in the unfoldingpush();
+			push();
+			fill(255);
 			textSize(16);
-			noStroke();
+			// noStroke();
+			stroke(244);
 			textFont(Myriad);
 			switch (stage){
 				case 0:
@@ -102,6 +113,7 @@ function Dot(number, xpos, ypos){
 
 			}
 		}
+		pop()
 
 			noFill();
 			strokeWeight(3);
@@ -195,19 +207,27 @@ function mousePressed(){
 
 			for(let x=1; x< $($('.main-content-box')).length+1; x++){
 				// console.log(stage)
+				if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
 				glitch[x] = new Glitch();
+			}
 				if(stage===1 &&x ===1) {
 					$($('.guidance')[0]).removeClass('visible');
 					$($('.guidance')[1]).removeClass('visible');
 
-					glitch[x].init();
+					$($('.guidance')[2]).removeClass('visible');
+					if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+						glitch[x].init();
+
 					$('.main-content-box').removeClass('visible');
 					$($('.main-content-box')[x-1]).addClass('visible');
 					$($('.main-content-box')[x-1]).css('animation', 'clipit 1s');
 					setTimeout(function(){ 
+						if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
 							glitch[x].on =false;
 							// glitch[x].init();
-							glitch[x].stop();
+							glitch[x].stop();}
 					$('#read-mode').css('opacity', '1');
 
 					$('#read-bubble').css('opacity', '1');
@@ -223,14 +243,17 @@ function mousePressed(){
 				else if(stage===x) {
 					let truthIndicator = Math.random();
 					if(truthIndicator <0.5){
-						glitch[x].init();
+						if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) 
+							glitch[x].init();
 						$($('.main-content-box')[x-2]).removeClass('visible');
 						$($('.main-content-box')[x-1]).addClass('visible');
 						$($('.main-content-box')[x-1]).css('animation', 'clipit 1s');
 						setTimeout(function(){ 
+							if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
 							glitch[x].on =false;
 							// glitch[x].init();
-							glitch[x].stop();
+							glitch[x].stop();}
 						},
 						1000);
 					}
